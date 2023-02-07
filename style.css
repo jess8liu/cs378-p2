@@ -113,3 +113,48 @@ button.order {
   cursor: pointer;
   width: 30%;
 }
+
+button.clear {
+  background-color: #84bde5;
+  border: 2px solid #2e5287;
+  border-radius: 20px;
+  color: #2e5287;
+  display: inline-block;
+  padding: 1%;
+  text-align: center;
+  text-decoration: none;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 3.5vw;
+  cursor: pointer;
+  width: 30%;
+}
+
+button.add {
+  background-color: #84bde5;
+  border: 2px solid #2e5287;
+  border-radius: 20px;
+  color: #2e5287;
+  display: inline-block;
+  padding: 1%;
+  text-align: center;
+  text-decoration: none;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 3.5vw;
+  cursor: pointer;
+  width: 30%;
+}
+
+button.remove {
+  background-color: #84bde5;
+  border: 2px solid #2e5287;
+  border-radius: 20px;
+  color: #2e5287;
+  display: inline-block;
+  padding: 1%;
+  text-align: center;
+  text-decoration: none;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 3.5vw;
+  cursor: pointer;
+  width: 30%;
+}
