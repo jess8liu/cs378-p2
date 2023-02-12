@@ -7,7 +7,7 @@ div {
   margin: auto;
   width: 100%;
   height: 100%;
-  /* border: dashed black 1px; */
+  border: dashed black 1px;
 }
 
 div.heading {
@@ -67,11 +67,42 @@ div.menu-price {
   text-align: right;
 }
 
-div.menu-button {
+div.menu-buttons {
   display: flex;
   justify-content: flex-end;
-  width: 100%;
+  float: right;
+  width: 25%;
   padding: 1%;
+}
+
+div.menu-item-total {
+  display: inline;
+  float: right;
+  padding: 1%;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 2vw;
+  width: 30%;
+}
+
+div.checkout {
+  display: flex;
+  padding: 2%;
+}
+
+div.checkout-subtotal {
+  display: inline;
+  float: left;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 3vw;
+  padding: 2%;
+  width: 50%;
+}
+
+div.checkout-buttons {
+  display: inline;
+  align-items: right;
+  width: 40%;
 }
 
 h1.motto {
@@ -116,8 +147,8 @@ button.order {
 }
 
 button.clear {
-  background-color: #84bde5;
-  border: 2% solid #2e5287;
+  background-color: lightgray;
+  border: 2% solid darkgray;
   border-radius: 8%;
   color: #2e5287;
   display: inline-block;
@@ -131,8 +162,8 @@ button.clear {
 }
 
 button.add {
-  background-color: lightgray;
-  border: 3px solid #8e8e8e;
+  background-color: white;
+  border: 3px solid black;
   border-radius: 50%;
   display: inline;
   text-align: center;
@@ -146,8 +177,8 @@ button.add {
 }
 
 button.remove {
-  background-color: lightgray;
-  border: 3px solid #8e8e8e;
+  background-color: white;
+  border: 3px solid black;
   border-radius: 50%;
   display: inline;
   text-align: center;
