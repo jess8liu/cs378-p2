@@ -68,7 +68,8 @@ div.menu-price {
 }
 
 div.menu-button {
-  display: inline-block;
+  display: flex;
+  justify-content: flex-end;
   width: 100%;
   padding: 1%;
 }
@@ -116,8 +117,8 @@ button.order {
 
 button.clear {
   background-color: #84bde5;
-  border: 2px solid #2e5287;
-  border-radius: 20px;
+  border: 2% solid #2e5287;
+  border-radius: 8%;
   color: #2e5287;
   display: inline-block;
   padding: 1%;
@@ -130,31 +131,31 @@ button.clear {
 }
 
 button.add {
-  background-color: #84bde5;
-  border: 2px solid #2e5287;
-  border-radius: 20px;
-  color: #2e5287;
-  display: inline-block;
-  padding: 1%;
+  background-color: lightgray;
+  border: 3px solid #8e8e8e;
+  border-radius: 50%;
+  display: inline;
   text-align: center;
   text-decoration: none;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 3.5vw;
+  font-size: 1.5vw;
   cursor: pointer;
-  width: 30%;
+  width: 3vw;
+  height: 3vw;
+  margin: 0 0 0 2%;
 }
 
 button.remove {
-  background-color: #84bde5;
-  border: 2px solid #2e5287;
-  border-radius: 20px;
-  color: #2e5287;
-  display: inline-block;
-  padding: 1%;
+  background-color: lightgray;
+  border: 3px solid #8e8e8e;
+  border-radius: 50%;
+  display: inline;
   text-align: center;
   text-decoration: none;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 3.5vw;
+  font-size: 1.5vw;
   cursor: pointer;
-  width: 30%;
+  width: 3vw;
+  height: 3vw;
+  margin: 0 0 0 2%;
 }
