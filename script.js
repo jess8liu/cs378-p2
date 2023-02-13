@@ -1,31 +1,29 @@
 // alert('hello world');
-const menu_buttons = document.querySelectorAll(".menu-buttons");
+const menu_label = document.querySelectorAll(".menu-label");
 const checkout_subtotal = document.querySelectorAll(".subtotal");
 
 let subtotal = 0;
 
-menu_buttons.forEach(function (set) {
+menu_label.forEach(function (set) {
     // Get buttons associated with each menu item
     const button_add = set.querySelector(".add");
     const button_remove = set.querySelector(".remove");
 
     // Get item price and total and set it to 0
-    const item_price = parseInt(set.dataset.factor);
-    
-
+    const item_price = parseInt(set.querySelector(".price").dataset.price-val);
     let item_total = 0;
 
     button_add.addEventListener("click", function () {
         // Add to items total and increase subtotal price
         item_total++;
-
-
+        subtotal += item_price;
     });
 
     button_remove.addEventListener("click", function () {
         // Ensure that the item_total does not go into negatives
         if (item_total > 0) {
             item_total--;
+            subtotal -= item_price;
         }
     });
 });
