@@ -38,7 +38,10 @@ menu_label.forEach(function (set) {
 
     button_clear.addEventListener("click", function () {
         // Clear all orders and subtotal
-        document.getElementById("subtotal").innerHTML = "0";
+        subtotal = 0;
+        num_items = 0;
+        item_total.innerHTML = toString(num_items);
+        checkout_subtotal.innerHTML = toString(subtotal);
     });
  
     button_order.addEventListener("click", function () {
