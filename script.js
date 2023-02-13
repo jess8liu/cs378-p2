@@ -3,7 +3,7 @@ const menu_label = document.querySelectorAll(".menu-label");
 const checkout = document.querySelectorAll(".checkout");
 
 let subtotal = 0;
-// document.getelementbyid ("subtotal").innerHTML = 0;
+document.getelementbyid ("subtotal").innerHTML = 0;
 
 menu_label.forEach(function (set) {
     // Get buttons associated with each menu item
@@ -30,7 +30,19 @@ menu_label.forEach(function (set) {
 });
 
 checkout.forEach(function (set) {
+    // Get order and clear buttons
+    const button_order = set.querySelector(".order");
+    const button_clear = set.querySelector(".clear");
+    
+    button_order.addEventListener("click", function () {
+        // Do an alert
 
+    });
+
+    button_clear.addEventListener("click", function () {
+        // Clear all orders and subtotal
+        document.getelementbyid ("subtotal").innerHTML = 0;
+    });
 });
 
 // alert('hello world');

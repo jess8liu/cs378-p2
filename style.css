@@ -7,7 +7,7 @@ div {
   margin: auto;
   width: 100%;
   height: 100%;
-  /* border: dashed black 1px; */
+  border: dashed black 1px;
 }
 
 div.heading {
@@ -97,8 +97,14 @@ div.checkout-subtotal {
   width: 70%;
 }
 
+div.subtotal {
+  display: flex;
+  width: 55%;
+  padding: 0 5% 0 1%;
+}
+
 div.checkout-buttons {
-  display: inline;
+  display: flex;
   align-content: right;
   width: 30%;
 }
