@@ -1,10 +1,12 @@
 // Get all of the menu items and checkout
 const menu_label = document.querySelectorAll(".menu-label");
-const checkout = document.querySelectorAll(".checkout");
 const button_order = document.querySelector(".order");
 const button_clear = document.querySelector(".clear");
 
+var checkout_subtotal = document.querySelector(".subtotal");
+
 let subtotal = 0;
+checkout_subtotal.innerHTML = 0;
 
 menu_label.forEach(function (set) {
     // Get buttons associated with each menu item
@@ -14,16 +16,16 @@ menu_label.forEach(function (set) {
     // Get item price and total and set it to 0
     const item_price = parseInt(set.querySelector(".menu-price"));
     let num_items = 0;
-    var item_total = set.querySelector("menu-item-total");
-    var checkout_subtotal = document.getElementById("subtotal");
+    var item_total = set.querySelector(".menu-item-total");
+    item_total.innerHTML = 0;
 
     button_add.addEventListener("click", function () {
         // Add to items total and increase subtotal price
         num_items++;
         subtotal += item_price;
         alert("price: " + item_price + " items: " + num_items);
-        item_total.innerHTML = toString(num_items);
-        checkout_subtotal.innerHTML = toString(subtotal);
+        item_total.innerHTML = num_items;
+        checkout_subtotal.innerHTML = subtotal;
     });
 
     button_remove.addEventListener("click", function () {
@@ -32,8 +34,8 @@ menu_label.forEach(function (set) {
             num_items--;
             subtotal -= item_price;
             alert("price: " + item_price + " items: " + num_items);
-            item_total.innerHTML = toString(num_items);
-            checkout_subtotal.innerHTML = toString(subtotal);
+            item_total.innerHTML = num_items;
+            checkout_subtotal.innerHTML = subtotal;
         } else {
             alert("There is nothing to remove!\n");
         }
@@ -42,7 +44,7 @@ menu_label.forEach(function (set) {
     button_clear.addEventListener("click", function () {
         // Clear all orders
         num_items = 0;
-        item_total.innerHTML = toString(num_items);
+        item_total.innerHTML = num_items;
     });
 });
 
@@ -58,6 +60,6 @@ button_order.addEventListener("click", function () {
 button_clear.addEventListener("click", function () {
     alert("Cleared.");
     subtotal = 0;
-    checkout_subtotal.innerHTML = toString(subtotal);
+    checkout_subtotal.innerHTML = 0;
 });
 // alert('hello world');
