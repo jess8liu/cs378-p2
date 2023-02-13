@@ -1,11 +1,10 @@
 // Get all of the menu items and checkout
 const menu_label = document.querySelectorAll(".menu-label");
 const checkout = document.querySelectorAll(".checkout");
-const button_order = set.querySelector(".order");
-const button_clear = set.querySelector(".clear");
+const button_order = document.querySelector(".order");
+const button_clear = document.querySelector(".clear");
 
 let subtotal = 0;
-document.getelementbyid ("subtotal").innerHTML = 0;
 
 menu_label.forEach(function (set) {
     // Get buttons associated with each menu item
@@ -15,8 +14,9 @@ menu_label.forEach(function (set) {
     // Get item price and total and set it to 0
     const item_price = parseInt(set.querySelector(".menu-price").dataset.price);
     let num_items = 0;
-    var item_total = set.getElementById("menu-item-total");
+    var item_total = set.querySelector("menu-item-total");
     var checkout_subtotal = document.getElementById("subtotal");
+    
 
     button_add.addEventListener("click", function () {
         // Add to items total and increase subtotal price
@@ -37,16 +37,26 @@ menu_label.forEach(function (set) {
     });
 
     button_clear.addEventListener("click", function () {
-        // Clear all orders and subtotal
-        subtotal = 0;
+        // Clear all orders
         num_items = 0;
         item_total.innerHTML = toString(num_items);
-        checkout_subtotal.innerHTML = toString(subtotal);
     });
  
-    button_order.addEventListener("click", function () {
-        // Do an alert
+    
+});
 
-    });
+button_order.addEventListener("click", function () {
+    // Do an alert
+    if (subtotal > 0) {
+        alert("ORDER");
+    } else {
+        alert("There is nothing in your cart!\n");
+    }
+});
+
+button_clear.addEventListener("click", function () {
+    alert("Cleared.");
+    subtotal = 0;
+    checkout_subtotal.innerHTML = toString(subtotal);
 });
 // alert('hello world');
