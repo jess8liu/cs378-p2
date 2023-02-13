@@ -70,6 +70,7 @@ div.menu-buttons {
   justify-content: flex-end;
   float: right;
   width: 30%;
+  padding: 10% 0 0 0;
 }
 
 div.menu-item-total {
@@ -84,22 +85,22 @@ div.menu-item-total {
 
 div.checkout {
   display: flex;
-  padding: 2%;
+  padding: 0 7% 0 7%;
 }
 
 div.checkout-subtotal {
-  display: inline;
+  display: flex;
+  align-content: center;
   float: left;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 3vw;
-  padding: 2%;
-  width: 50%;
+  font-size: 5vw;
+  width: 70%;
 }
 
 div.checkout-buttons {
   display: inline;
   align-content: right;
-  width: 40%;
+  width: 30%;
 }
 
 img.title {
@@ -118,14 +119,15 @@ button.order {
   border: 2px solid #2e5287;
   border-radius: 20px;
   color: #2e5287;
-  display: inline-block;
+  display: inline;
   padding: 1%;
   text-align: center;
   text-decoration: none;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 3.5vw;
+  font-size: 3vw;
   cursor: pointer;
-  width: 30%;
+  width: 40%;
+  margin: 3%;
 }
 
 button.clear {
@@ -133,14 +135,16 @@ button.clear {
   border: 2px solid darkgray;
   border-radius: 20px;
   color: #2e5287;
-  display: inline-block;
+  display: inline;
   padding: 1%;
   text-align: center;
   text-decoration: none;
+  float: right;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 3.5vw;
+  font-size: 3vw;
   cursor: pointer;
-  width: 30%;
+  width: 40%;
+  margin: 3%;
 }
 
 button.add {
@@ -152,6 +156,7 @@ button.add {
   text-decoration: none;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 10px;
+  font-weight: bold;
   cursor: pointer;
   width: 20px;
   height: 20px;
@@ -167,6 +172,7 @@ button.remove {
   text-decoration: none;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 10px;
+  font-weight: bold;
   cursor: pointer;
   width: 20px;
   height: 20px;
@@ -191,9 +197,4 @@ h2.motto {
 p.subtotal {
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 2vw;
-}
-
-span.item_price {
-  color: gray;
-  display: inline;
 }

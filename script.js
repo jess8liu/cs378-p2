@@ -1,8 +1,9 @@
-// alert('hello world');
+// Get all of the menu items and checkout
 const menu_label = document.querySelectorAll(".menu-label");
 const checkout = document.querySelectorAll(".checkout");
 
 let subtotal = 0;
+// document.getelementbyid ("subtotal").innerHTML = 0;
 
 menu_label.forEach(function (set) {
     // Get buttons associated with each menu item
@@ -28,3 +29,8 @@ menu_label.forEach(function (set) {
     });
 });
 
+checkout.forEach(function (set) {
+
+});
+
+// alert('hello world');
