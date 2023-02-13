@@ -10,7 +10,7 @@ menu_label.forEach(function (set) {
     const button_remove = set.querySelector(".remove");
 
     // Get item price and total and set it to 0
-    const item_price = parseInt(set.querySelector(".price").dataset.price-val);
+    const item_price = parseInt(set.querySelector(".menu-price").dataset.price-val);
     let item_total = 0;
 
     button_add.addEventListener("click", function () {

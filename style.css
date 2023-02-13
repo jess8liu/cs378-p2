@@ -7,7 +7,7 @@ div {
   margin: auto;
   width: 100%;
   height: 100%;
-  border: dashed black 1px;
+  /* border: dashed black 1px; */
 }
 
 div.heading {
@@ -54,16 +54,14 @@ div.menu-txt {
 
 div.menu-name {
   display: inline;
-  width: 75%;
+  width: 80%;
   float: left;
-  padding: 1%;
 }
 
 div.menu-price {
   display: inline;
-  width: 25%;
+  width: 20%;
   float: right;
-  padding: 1%;
   text-align: right;
 }
 
@@ -72,17 +70,16 @@ div.menu-buttons {
   justify-content: flex-end;
   float: right;
   width: 30%;
-  padding: 5% 1%;
 }
 
 div.menu-item-total {
   display: inline;
   float: right;
-  padding: 1%;
   text-align: center;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 2vw;
+  font-size: 3.5vw;
   width: 30%;
+  padding: 0;
 }
 
 div.checkout {
@@ -101,7 +98,7 @@ div.checkout-subtotal {
 
 div.checkout-buttons {
   display: inline;
-  align-items: right;
+  align-content: right;
   width: 40%;
 }
 
@@ -154,10 +151,10 @@ button.add {
   text-align: center;
   text-decoration: none;
   font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 10px;
   cursor: pointer;
   width: 20px;
   height: 20px;
-  padding: 0;
   margin: 0 0 0 2%;
 }
 
@@ -169,10 +166,10 @@ button.remove {
   text-align: center;
   text-decoration: none;
   font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 10px;
   cursor: pointer;
   width: 20px;
   height: 20px;
-  padding: 0;
   margin: 0 0 0 2%;
 }
 
@@ -196,6 +193,7 @@ p.subtotal {
   font-size: 2vw;
 }
 
-p.item_price {
+span.item_price {
   color: gray;
+  display: inline;
 }
