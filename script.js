@@ -1,6 +1,6 @@
 // alert('hello world');
 const menu_label = document.querySelectorAll(".menu-label");
-const checkout_subtotal = document.querySelectorAll(".subtotal");
+const checkout = document.querySelectorAll(".checkout");
 
 let subtotal = 0;
 
