@@ -15,7 +15,7 @@ menu_label.forEach(function (set) {
     // Get item price and total and set it to 0
     const item_price = parseInt(set.querySelector(".menu-price").dataset.price);
     let num_items = 0;
-    var item_total = document.getElementById("menu-item-total");
+    var item_total = set.getElementById("menu-item-total");
     var checkout_subtotal = document.getElementById("subtotal");
 
     button_add.addEventListener("click", function () {
