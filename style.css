@@ -105,21 +105,6 @@ div.checkout-buttons {
   width: 40%;
 }
 
-h1.motto {
-  display: block;
-  color: orange;
-  font-size: 4.5vw;
-  text-align: center;
-}
-
-h2.motto {
-  display: block;
-  color: gray;
-  font-size: 4vw;
-  text-align: center;
-  font-style: italic;
-}
-
 img.title {
   display: block;
   margin-left: auto;
@@ -191,4 +176,24 @@ button.remove {
   height: 50px;
   padding: 0;
   margin: 0 0 0 2%;
+}
+
+h1.motto {
+  display: block;
+  color: orange;
+  font-size: 4.5vw;
+  text-align: center;
+}
+
+h2.motto {
+  display: block;
+  color: gray;
+  font-size: 4vw;
+  text-align: center;
+  font-style: italic;
+}
+
+p.subtotal {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 2vw;
 }
