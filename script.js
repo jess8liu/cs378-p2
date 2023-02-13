@@ -12,27 +12,30 @@ menu_label.forEach(function (set) {
     const button_remove = set.querySelector(".remove");
 
     // Get item price and total and set it to 0
-    const item_price = parseInt(set.querySelector(".menu-price").dataset.price);
+    const item_price = parseInt(set.querySelector(".menu-price"));
     let num_items = 0;
     var item_total = set.querySelector("menu-item-total");
     var checkout_subtotal = document.getElementById("subtotal");
-    
 
     button_add.addEventListener("click", function () {
         // Add to items total and increase subtotal price
         num_items++;
         subtotal += item_price;
+        alert("price: " + item_price + " items: " + num_items);
         item_total.innerHTML = toString(num_items);
         checkout_subtotal.innerHTML = toString(subtotal);
     });
 
     button_remove.addEventListener("click", function () {
         // Ensure that the item_total does not go into negatives
-        if (item_total > 0) {
+        if (num_items > 0) {
             num_items--;
             subtotal -= item_price;
+            alert("price: " + item_price + " items: " + num_items);
             item_total.innerHTML = toString(num_items);
             checkout_subtotal.innerHTML = toString(subtotal);
+        } else {
+            alert("There is nothing to remove!\n");
         }
     });
 
@@ -41,8 +44,6 @@ menu_label.forEach(function (set) {
         num_items = 0;
         item_total.innerHTML = toString(num_items);
     });
- 
-    
 });
 
 button_order.addEventListener("click", function () {
