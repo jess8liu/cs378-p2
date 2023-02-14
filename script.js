@@ -2,8 +2,9 @@
 const menu_label = document.querySelectorAll(".menu-label");
 const button_order = document.querySelector(".order");
 const button_clear = document.querySelector(".clear");
+const checkout_subtotal = document.querySelector(".subtotal");
 
-var checkout_subtotal = document.querySelector(".subtotal");
+const menu_items = ["Indian Curry", "Pork Dumplings", "Greek Gyro", "Spring Soup"];
 
 let subtotal = 0;
 checkout_subtotal.innerHTML = 0;
@@ -14,7 +15,7 @@ menu_label.forEach(function (set) {
     const button_remove = set.querySelector(".remove");
 
     // Get item price and total and set it to 0
-    const item_price = parseInt(set.querySelector(".menu-price"));
+    const item_price = parseInt(set.querySelector(".menu-price").getAttribute("price"));
     let num_items = 0;
     var item_total = set.querySelector(".menu-item-total");
     item_total.innerHTML = 0;
@@ -23,7 +24,6 @@ menu_label.forEach(function (set) {
         // Add to items total and increase subtotal price
         num_items++;
         subtotal += item_price;
-        alert("price: " + item_price + " items: " + num_items);
         item_total.innerHTML = num_items;
         checkout_subtotal.innerHTML = subtotal;
     });
@@ -33,11 +33,10 @@ menu_label.forEach(function (set) {
         if (num_items > 0) {
             num_items--;
             subtotal -= item_price;
-            alert("price: " + item_price + " items: " + num_items);
             item_total.innerHTML = num_items;
             checkout_subtotal.innerHTML = subtotal;
         } else {
-            alert("There is nothing to remove!\n");
+            alert("There is nothing to remove!");
         }
     });
 
@@ -51,15 +50,30 @@ menu_label.forEach(function (set) {
 button_order.addEventListener("click", function () {
     // Do an alert
     if (subtotal > 0) {
-        alert("ORDER");
+        const message = "Order placed!\n"
+        let order_items = "";
+        let item_index = 0;
+
+        // Add how many items and which items are in order
+        menu_label.forEach(function (set) {
+            // Get how many items
+            let item_total = set.querySelector(".menu-item-total").innerHTML;
+
+            // Add to message if items actually added
+            if (item_total > 0) {
+                order_items += item_total+ " " + menu_items[item_index] + " ";
+            }
+            item_index++;
+        });
+
+        // Post message
+        alert(message + order_items);
     } else {
-        alert("There is nothing in your cart!\n");
+        alert("No items in cart.");
     }
 });
 
 button_clear.addEventListener("click", function () {
-    alert("Cleared.");
     subtotal = 0;
     checkout_subtotal.innerHTML = 0;
 });
-// alert('hello world');
